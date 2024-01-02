@@ -1,11 +1,15 @@
-name: Building yml 
-on: push
+on: 
+    push:
+        branches: [master]
+    
 
 jobs:
-    builds:
-        runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu
+        
         steps:
-        - run: node --version
-        - run: npm --version
-        - uses: actions/checkout@v4
-        - run: node index.js
+            - run: node --version
+            - run: npm --version
+            - run: npm install
+            - uses: actions/checkout@v4
+            - run: node index.js
