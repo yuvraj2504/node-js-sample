@@ -10,5 +10,6 @@ jobs:
         steps:
             - run: node --version
             - run: npm --version
+            - run: npm install
             - uses: actions/checkout@v4
             - run: node index.js
