@@ -1,15 +1,24 @@
-on: 
-    push:
-        branches: [master]
-    
+on:
+  push:
+    branches: [master]
 
 jobs:
-    build:
-        runs-on: ubuntu
-        
-        steps:
-            - run: node --version
-            - run: npm --version
-            - run: npm install
-            - uses: actions/checkout@v4
-            - run: node index.js
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Node Version
+        run: node --version
+
+      - name: NPM Version
+        run: npm --version
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Run Node Application
+        run: node index.js
+
