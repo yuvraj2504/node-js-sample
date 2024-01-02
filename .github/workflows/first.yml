@@ -5,8 +5,8 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu-latest
-        container : node:18
+        runs-on: ubuntu
+        
         steps:
             - run: node --version
             - run: npm --version
