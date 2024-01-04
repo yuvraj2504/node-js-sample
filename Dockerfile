@@ -15,4 +15,4 @@ COPY app.json app.json
 
 
 
-ENTRYPOINT [ "node", "index.js" ]
+ENTRYPOINT [ "npm", "start" ]
