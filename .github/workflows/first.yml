@@ -13,9 +13,8 @@ jobs:
             - uses: actions/checkout@v4
             
             - run: node index.js
-            - name: build and push image
-              run: 
-                echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "reehanruhullah/dataphion_prac" --password-stdin
+            - name: Log in to Docker Hub
+              run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
                 docker image build -t reehanruhullah/dataphion_prac:tagname
                 docker push reehanruhullah/dataphion_prac:tagname
 
