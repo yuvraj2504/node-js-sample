@@ -15,7 +15,7 @@ jobs:
             - run: node index.js
             - name: build and push image
               run: 
-                echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "dataphion_prac" --password-stdin
-                docker image build -t dataphion_prac/abc .
-                docker push dataphion_prac/abc
+                echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "reehanruhullah/dataphion_prac" --password-stdin
+                docker image build -t reehanruhullah/dataphion_prac:tagname
+               ocker push reehanruhullah/dataphion_prac:tagname
 
