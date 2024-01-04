@@ -11,8 +11,6 @@ jobs:
             - run: node --version
             
             - uses: actions/checkout@v4
-            - run: node index.js
-            - run: npm --version
             
             - name: Log in to Docker Hub
               run: |
