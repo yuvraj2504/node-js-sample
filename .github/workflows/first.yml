@@ -17,5 +17,5 @@ jobs:
               run: 
                 echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "reehanruhullah/dataphion_prac" --password-stdin
                 docker image build -t reehanruhullah/dataphion_prac:tagname
-               ocker push reehanruhullah/dataphion_prac:tagname
+                docker push reehanruhullah/dataphion_prac:tagname
 
