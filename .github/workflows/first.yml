@@ -5,7 +5,7 @@ on:
 
 jobs:
     build:
-        runs-on: ubuntu1
+        runs-on: ubu
         
         steps:
             - run: node --version
