@@ -8,7 +8,7 @@ jobs:
         runs-on: ubut
         
         steps:
-            - run: node --version
+          
             
             - uses: actions/checkout@v4
             
