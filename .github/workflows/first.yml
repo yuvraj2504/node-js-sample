@@ -7,7 +7,7 @@ jobs:
     build:
         runs-on: 
           - self-hosted
-          - ubut
+          - ubutt
         steps:
           - uses: actions/checkout@v4
           
