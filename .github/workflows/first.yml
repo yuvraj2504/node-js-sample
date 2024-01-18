@@ -17,7 +17,7 @@ jobs:
                 docker image build -t reehanruhullah/dataphion_prac:tagname .
                 docker push reehanruhullah/dataphion_prac:tagname
                 
-            - name: Log in to Docker Hub
+            - name: use ansible
               run: |
                 ansible-playbook ansible.yml -i inventory.txt
 
