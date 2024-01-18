@@ -4,10 +4,10 @@
   become: no
   gather_facts: no
   vars:
-    docker_registry_password: "{{DOCKER_PASSWORD  }}"
+    docker_registry_password: "{{DOCKER_PASSWORD }}"
   tasks:
     - name: Login to docker registry
-      shell: docker login <docker hub url>  -u <reehanruhullah> -p "{{ docker_registry_password }}"
+      shell: docker login https://hub.docker.com/repository/docker/reehanruhullah/dataphion_prac  -u <reehanruhullah> -p "{{ docker_registry_password }}"
 
     - name: pull image from docker hub
       shell: "docker pull reehanruhullah/dataphion_prac:tagname"
