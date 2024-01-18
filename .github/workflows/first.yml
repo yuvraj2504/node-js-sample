@@ -5,19 +5,17 @@ on:
 
 jobs:
     build:
-        runs-on: ubut
-        
+        runs-on: 
+          - self-hosted
+          - ubutt
         steps:
           
             
             - uses: actions/checkout@v4
             
-             #- name: Log in to Docker Hub
-             # run: |
-             #   echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-             #   docker image build -t reehanruhullah/dataphion_prac:tagname .
-             #   docker push reehanruhullah/dataphion_prac:tagname
-            - name: use ansible
+            - name: Log in to Docker Hub
               run: |
-              ansible-playbook ansible.yml -i inventory.txt
+                echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+                docker image build -t reehanruhullah/dataphion_prac:tagname .
+                docker push reehanruhullah/dataphion_prac:tagname
 
