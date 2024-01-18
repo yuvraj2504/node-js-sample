@@ -1,13 +1,16 @@
+
 ---
-- name: "this is our first play"
-  hosts: deploy
+- hosts: deploy
+  become: no
+  gather_facts: no
+  vars:
+    docker_registry_password: "{{ Seeusoon@1 }}"
   tasks:
-    - name: "login and pushing in docker"
-      command: |
-               echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-    - name: "pull"
-      command: |
-               docker pull reehanruhullah/dataphion_prac:tagname
-    - name: "run"
-      command: |
-               docker run 
+    - name: Login to docker registry
+      shell: docker login <docker hub url>  -u <reehanruhullah> -p "{{ Seeusson@1 }}"
+
+    - name: pull image from docker hub
+      shell: "docker pull reehanruhullah/dataphion_prac:tagname"
+
+    - name: docker run
+      shell: docker run --init -d -ti reehanruhullah/dataphion_prac:tagname
