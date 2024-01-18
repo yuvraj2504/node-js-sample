@@ -15,5 +15,5 @@ jobs:
             
             - name: Log in to Docker Hub
               run: |
-                ansible-playbook ansible.yml ansible/arpi.txt 
+                ansible-playbook ansible.yml inventory.txt
 
