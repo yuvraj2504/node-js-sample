@@ -13,4 +13,4 @@
       shell: "docker pull reehanruhullah/dataphion_prac:tagname"
 
     - name: docker run
-      shell: docker run --init -d -ti  reehanruhullah/dataphion_prac:tagname
+      shell: docker run --init -d -ti -p 80:5000 reehanruhullah/dataphion_prac:tagname
