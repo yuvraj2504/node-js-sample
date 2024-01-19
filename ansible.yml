@@ -9,6 +9,7 @@
   tasks:
     - name: Login to docker registry
       shell: echo "{{ docker_registry_password }}" | docker login -u reehanruhullah --password-stdin https://index.docker.io/v1/
+    
     - name: pull image from docker hub
       shell: docker pull reehanruhullah/dataphion_prac:tagname
 
