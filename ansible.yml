@@ -7,7 +7,7 @@
     docker_registry_password: "{{ password }}"
   tasks:
     - name: Login to docker registry
-      shell: docker login https://hub.docker.com/repository/docker/reehanruhullah/dataphion_prac/general  -u reehanruhullah -p "{{ docker_registry_password }}"
+      shell: docker login https://hub.docker.comr  -u reehanruhullah -p "{{ docker_registry_password }}"
 
     - name: pull image from docker hub
       shell: "docker pull reehanruhullah/dataphion_prac:tagname"
