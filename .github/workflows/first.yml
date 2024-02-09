@@ -18,7 +18,9 @@ jobs:
                 docker image build -t reehanruhullah/dataphion_prac:abc .
                 docker push reehanruhullah/dataphion_prac:abc
     
-              
+          
+                
+                
             - name: run ansible playbook
               if: github.ref == 'refs/heads/master'
               env:
