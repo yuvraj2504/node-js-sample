@@ -7,7 +7,7 @@ jobs:
     build:
         runs-on: 
           - self-hosted
-          - ubutt
+          - ubut
         steps:
           
             - uses: actions/checkout@v4
@@ -20,7 +20,7 @@ jobs:
     
           
                 
-                
+
             - name: run ansible playbook
               if: github.ref == 'refs/heads/master'
               env:
